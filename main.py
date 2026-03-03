@@ -54,6 +54,7 @@ def hold(target_proc, blob, access_flag):
     kernel.WriteProcessMemory(target_proc, addr, blob, len(blob), None)
     return addr
 
+
 # get pid
 def pid():
     print("[1] manual")
@@ -67,10 +68,12 @@ def pid():
         return launched.pid
     return int(input("proc id -> "))
 
+
 # get payload
 def payload():
     txt = input("payload -> ").strip()
     return (txt + "\n").encode("utf-8") + b"\x00"
+
 
 # sends the payload
 def write(pid, payload):
@@ -110,6 +113,7 @@ def write(pid, payload):
     kernel.VirtualFreeEx(proc, stub, 0, 0x8000)
     kernel.VirtualFreeEx(proc, mem, 0, 0x8000)
     kernel.CloseHandle(proc)
+
 
 target_pid = pid()
 while True:
