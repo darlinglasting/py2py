@@ -9,8 +9,9 @@
 
 ---
 
-py2py allows you to access a running python process and inject python code into the python process running
-If you want something added, fixed, or anything else, feel free to DM me.
+py2py injects into a running Python process and executes a Python payload within that process.
+
+If you have suggestions, feature requests, or fixes, feel free to reach out.
 
 ```python
 python main.py
