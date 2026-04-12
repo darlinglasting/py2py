@@ -1,7 +1,6 @@
 <div align="center">
 
 # **PY2PY**
-</div>
 
 ---
 
